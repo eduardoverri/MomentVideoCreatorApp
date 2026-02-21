@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VideoClipper.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Button Text="Select Video" Clicked="OnSelectVideoClicked" />
+            <Label x:Name="SelectedVideoLabel" Text="No video selected" FontAttributes="Italic" />
+            
+            <Label Text="Media Information:" FontAttributes="Bold" />
+            <Label x:Name="MediaInfoLabel" Text="..." FontSize="12" />
+
+            <Label Text="Enter timestamps (comma separated in seconds):" FontAttributes="Bold" />
+            <Entry x:Name="TimestampsEntry" Placeholder="e.g. 10.0, 45.5, 120.0" Text="10.0, 45.5, 120.0" />
+            
+            <Button Text="Process Video" Clicked="OnProcessClicked" VerticalOptions="EndAndExpand" />
+            <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" />
+            <Label x:Name="StatusLabel" Text="Welcome!" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
